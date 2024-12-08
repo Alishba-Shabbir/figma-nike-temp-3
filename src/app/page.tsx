@@ -1,6 +1,4 @@
-"use client"; // This marks the file as a client component
 
-import { useState } from 'react';
 import Image from 'next/image';
 import homeimage from '@/app/public/homeimage.png';
 import img1 from "@/app/public/img1.png";
@@ -13,18 +11,8 @@ import essential from "@/app/public/essential.png";
 import clothes from "@/app/public/clothes.png";
 import categories from "@/app/public/categories.png";
 
-const BlogSlider = () => {
-  // State to track the slide status (whether it's showing 3 or 4 blogs)
-  const [isSlid, setIsSlid] = useState(false);
 
-  // Function to handle the toggle of the slider
-  const toggleArrow = (direction: 'left' | 'right') => {
-    if (direction === 'left') {
-      setIsSlid(false); // Show 3 blogs
-    } else if (direction === 'right') {
-      setIsSlid(true); // Show 4 blogs
-    }
-  };
+  export default function Home (){
 
   return (
     <div>
@@ -67,13 +55,11 @@ const BlogSlider = () => {
           <span className="shop-text">Shop</span>
           <button
             className="circle-button"
-            onClick={() => toggleArrow('left')}
           >
             &lt;
           </button>
           <button
             className="circle-button"
-            onClick={() => toggleArrow('right')}
           >
             &gt;
           </button>
@@ -81,7 +67,7 @@ const BlogSlider = () => {
       </div>
 
       <div className="blog-container">
-        <div className={`blogs ${isSlid ? 'slid' : ''}`}>
+       
           <div className="blog">
             <Image src={img1} alt="Blog Image 1" className="blog-image" width={441} height={441} />
           </div>
@@ -94,8 +80,8 @@ const BlogSlider = () => {
           <div className="blog">
             <Image src={img4} alt="Blog Image 4" className="blog-image" width={441} height={441} />
             <p className="blog-text">Nike Air Max SYSTM</p>
-            <h3>Women's Shoes</h3>
-          </div>
+            <h3>Womens Shoes</h3>
+         
         </div>
       </div>
 
@@ -121,4 +107,3 @@ const BlogSlider = () => {
   );
 };
 
-export default BlogSlider;
