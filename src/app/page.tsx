@@ -5,7 +5,7 @@ import img1 from "@/app/public/img1.png";
 import img2 from "@/app/public/img2.png";
 import img3 from "@/app/public/img3.png";
 import img4 from "@/app/public/img4.png";
-import feature from "@/app/public/Feature.png";
+import Feature from "@/app/public/Feature.png";
 import Gear from "@/app/public/Gear.png";
 import essential from "@/app/public/essential.png";
 import clothes from "@/app/public/clothes.png";
@@ -86,7 +86,7 @@ import categories from "@/app/public/categories.png";
       </div>
 
       <div className="feature-page">
-        <Image src={feature} alt="feature" />
+        <Image src={Feature} alt="feature" />
       </div>
 
       <div className="Gear-up-page">
